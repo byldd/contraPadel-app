@@ -1,16 +1,16 @@
 import {Text, Button} from 'react-native';
 import React from 'react';
-import {useNavigation} from '@react-navigation/native';
 import {ROUTES} from '../../../navigation/routes';
+import {useNavigation} from '@react-navigation/native';
 import {Navigation} from '../../../types/navigation.type';
 import ScreenWrapper from '../../../components/layouts/screenWrapper/screenWrapper';
 
-const LoginScreen = () => {
+const SplashScreen = () => {
   const navigation: Navigation = useNavigation();
 
   return (
     <ScreenWrapper>
-      <Text>LoginScreen</Text>
+      <Text>Splash</Text>
       <Button
         title="REGISTER"
         onPress={() => navigation.navigate(ROUTES.REGISTER)}
@@ -23,4 +23,4 @@ const LoginScreen = () => {
   );
 };
 
-export default LoginScreen;
+export default SplashScreen;

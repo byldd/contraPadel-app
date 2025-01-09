@@ -6,11 +6,13 @@ import {ROUTES} from './routes';
 import BottomTab from '../screens/bottomTab';
 import LoginScreen from '../screens/auth/login';
 import RegisterScreen from '../screens/auth/register';
+import SplashScreen from '../screens/auth/splash';
 
 const Stack = createNativeStackNavigator();
 const AppNavigator = () => {
   return (
     <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name={ROUTES.SPLASH} component={SplashScreen} />
       <Stack.Screen name={ROUTES.LOGIN} component={LoginScreen} />
       <Stack.Screen name={ROUTES.REGISTER} component={RegisterScreen} />
       <Stack.Screen name={ROUTES.BOTTOMTAB} component={BottomTab} />

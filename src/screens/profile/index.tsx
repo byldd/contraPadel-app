@@ -1,17 +1,18 @@
-import {View, Text, Button} from 'react-native';
+import {Text, Button} from 'react-native';
 import React from 'react';
 import {ROUTES} from '../../navigation/routes';
 import {useNavigation} from '@react-navigation/native';
 import {Navigation} from '../../types/navigation.type';
+import ScreenWrapper from '../../components/layouts/screenWrapper/screenWrapper';
 
 const ProfileScreen = () => {
   const navigation: Navigation = useNavigation();
 
   return (
-    <View>
+    <ScreenWrapper>
       <Text>ProfileScreen</Text>
       <Button title="Home" onPress={() => navigation.navigate(ROUTES.HOME)} />
-    </View>
+    </ScreenWrapper>
   );
 };
 

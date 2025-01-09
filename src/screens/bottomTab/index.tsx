@@ -5,7 +5,14 @@ import ProfileScreen from '../profile';
 const Tab = createBottomTabNavigator();
 const BottomTab = () => {
   return (
-    <Tab.Navigator screenOptions={{headerShown: true}}>
+    <Tab.Navigator
+      screenOptions={{
+        headerShown: false,
+        tabBarStyle: {
+          backgroundColor: '#070209',
+          borderTopColor: 'transparent',
+        },
+      }}>
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Profile" component={ProfileScreen} />
     </Tab.Navigator>

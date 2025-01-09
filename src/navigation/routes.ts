@@ -4,4 +4,5 @@ export const ROUTES = {
   HOME: 'Home',
   PROFILE: 'Profile',
   BOTTOMTAB: 'BottomTab',
+  SPLASH: 'Splash',
 };
