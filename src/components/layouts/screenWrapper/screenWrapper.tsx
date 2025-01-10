@@ -38,7 +38,7 @@ const ScreenWrapper = ({
         <ImageBackground
           style={[commonStyles.fullFlex]}
           source={Images.bg1}
-          resizeMode="cover">
+          resizeMode="stretch">
           <KeyboardAwareScrollView
             refreshControl={
               onRefresh ? (
@@ -73,7 +73,7 @@ const ScreenWrapper = ({
     <ImageBackground
       style={[commonStyles.fullFlex]}
       source={Images.bg}
-      resizeMode="cover">
+      resizeMode="stretch">
       <SafeAreaView style={[commonStyles.fullFlex]}>
         <View
           style={[
