@@ -1,12 +1,12 @@
 export const fontWeights = {
-  bold300: 'Montserrat-Light',
-  bold400: 'Montserrat-Regular',
-  bold500: 'Montserrat-Medium',
-  bold600: 'Montserrat-SemiBold',
-  bold700: 'Montserrat-Bold',
-  bold800: 'Montserrat-ExtraBold',
+  bold300: 'Roboto-Light',
+  bold400: 'Roboto-Regular',
+  bold500: 'Roboto-Medium',
+  bold600: 'Roboto-SemiBold',
+  bold700: 'Roboto-Bold',
+  bold800: 'Roboto-Bold',
 };
-export const fontFamily = {body: 'Montserrat-Regular'};
+export const fontFamily = {body: 'Roboto-Regular'};
 export const fontSizes = {
   caption: 12,
   button: 14,

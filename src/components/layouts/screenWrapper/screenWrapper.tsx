@@ -22,6 +22,7 @@ const ScreenWrapper = ({
   safeAreaStyle,
   onRefresh,
   refreshing,
+  headerComponent,
 }: {
   children?: React.ReactNode;
   style?: StyleProp<ViewStyle>;
@@ -31,14 +32,16 @@ const ScreenWrapper = ({
   paddingHorizontal?: boolean;
   onRefresh?: () => void;
   refreshing?: boolean;
+  headerComponent?: React.ReactNode;
 }) => {
   if (scrollEnabled) {
     return (
-      <SafeAreaView style={[commonStyles.fullFlex, safeAreaStyle]}>
-        <ImageBackground
-          style={[commonStyles.fullFlex]}
-          source={Images.bg1}
-          resizeMode="stretch">
+      <ImageBackground
+        style={[commonStyles.fullFlex]}
+        source={Images.bg1}
+        resizeMode="stretch">
+        <SafeAreaView style={[commonStyles.fullFlex, safeAreaStyle]}>
+          {headerComponent && headerComponent}
           <KeyboardAwareScrollView
             refreshControl={
               onRefresh ? (
@@ -64,8 +67,8 @@ const ScreenWrapper = ({
               {children}
             </View>
           </KeyboardAwareScrollView>
-        </ImageBackground>
-      </SafeAreaView>
+        </SafeAreaView>
+      </ImageBackground>
     );
   }
 

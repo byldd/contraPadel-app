@@ -19,12 +19,13 @@ const Header = ({
   return (
     <>
       <Row alignItems="center" justifyContent="space-between">
-        <TouchableOpacity onPress={() => navigation.goBack()}>
+        <TouchableOpacity
+          onPress={() => (hideBackButton ? {} : navigation.goBack())}>
           <Row alignItems="center" gap={10} style={[commonStyles.padding16]}>
             {!hideBackButton && (
               <Icon
                 name="chevron-back-outline"
-                size={26}
+                size={22}
                 color={theme.colors.ui.white}
               />
             )}

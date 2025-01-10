@@ -10,8 +10,7 @@ const ProfileScreen = () => {
   const navigation: Navigation = useNavigation();
 
   return (
-    <ScreenWrapper>
-      <Header title={'PROFILE'} />
+    <ScreenWrapper scrollEnabled headerComponent={<Header title={'PROFILE'} />}>
       <Button title="Home" onPress={() => navigation.navigate(ROUTES.HOME)} />
     </ScreenWrapper>
   );

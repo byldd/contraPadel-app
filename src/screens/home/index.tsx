@@ -9,13 +9,14 @@ import Header from '../../components/header';
 const HomeScreen = () => {
   const navigation: Navigation = useNavigation();
   return (
-    <ScreenWrapper>
-      <Header title={'HOME'} />
-      <Button
-        title="Profile"
-        onPress={() => navigation.navigate(ROUTES.PROFILE)}
-      />
-    </ScreenWrapper>
+    <>
+      <ScreenWrapper scrollEnabled headerComponent={<Header title={'HOME'} />}>
+        <Button
+          title="Profile"
+          onPress={() => navigation.navigate(ROUTES.PROFILE)}
+        />
+      </ScreenWrapper>
+    </>
   );
 };
 
