@@ -1,5 +1,5 @@
 import {Text, TouchableOpacity} from 'react-native';
-import React from 'react';
+import React, {memo} from 'react';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {theme} from '../../infrastructure/theme';
 import {commonStyles} from '../../styles/commonStyles';
@@ -69,4 +69,4 @@ const Header = ({
   );
 };
 
-export default Header;
+export default memo(Header);
