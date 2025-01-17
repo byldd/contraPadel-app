@@ -1,10 +1,10 @@
-import React from "react";
-import ScreenWrapper from "../../../components/layouts/screenWrapper/screenWrapper";
-import CustomButton from "../../../components/button/customButton";
-import { Column, Row } from "../../../components/tools";
-import { commonStyles } from "../../../styles/commonStyles";
-import { ROUTES } from "@/src/navigation/routes";
-import { router } from "expo-router";
+import React from 'react';
+import ScreenWrapper from '../../../components/layouts/screenWrapper/screenWrapper';
+import CustomButton from '../../../components/button/customButton';
+import {Column, Row} from '../../../components/tools';
+import {commonStyles} from '../../../styles/commonStyles';
+import {ROUTES} from '@/src/navigation/routes';
+import {router} from 'expo-router';
 
 const SplashScreen = () => {
   return (

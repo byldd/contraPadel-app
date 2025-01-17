@@ -7,13 +7,18 @@
     "scheme": "myapp",
     "userInterfaceStyle": "automatic",
     "newArchEnabled": true,
+
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.anonymous.contraPadel-app",
+      "useFrameworks": "static"
     },
     "android": {
+      "googleServicesFile": "./google-services.json",
       "adaptiveIcon": {
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.anonymous.contraPadelapp"
     },
     "web": {
       "bundler": "metro",
@@ -24,6 +29,7 @@
       [
         "expo-splash-screen",
         {
+          "image": "./assets/splashscreen_logo/splashscreen_logo.png",
           "imageWidth": 200,
           "resizeMode": "contain",
           "backgroundColor": "#ffffff"
