@@ -1,26 +1,17 @@
-import {Button} from 'react-native';
-import React from 'react';
-import {useNavigation} from '@react-navigation/native';
-import {ROUTES} from '../../../navigation/routes';
-import {Navigation} from '../../../types/navigation.type';
-import ScreenWrapper from '../../../components/layouts/screenWrapper/screenWrapper';
-import Header from '../../../components/header';
+import { Button } from "react-native";
+import React from "react";
+import ScreenWrapper from "../../../components/layouts/screenWrapper/screenWrapper";
+import Header from "../../../components/header";
+import { router } from "expo-router";
+import { ROUTES } from "@/src/navigation/routes";
 
 const LoginScreen = () => {
-  const navigation: Navigation = useNavigation();
-
   return (
     <ScreenWrapper>
-      <Header title={'SIGN IN'} hideBackButton />
+      <Header title={"SIGN IN"} hideBackButton />
 
-      <Button
-        title="REGISTER"
-        onPress={() => navigation.navigate(ROUTES.REGISTER)}
-      />
-      <Button
-        title="HOME"
-        onPress={() => navigation.navigate(ROUTES.BOTTOMTAB)}
-      />
+      <Button title="REGISTER" onPress={() => router.push(ROUTES.REGISTER)} />
+      <Button title="HOME" onPress={() => router.push(ROUTES.HOME)} />
     </ScreenWrapper>
   );
 };

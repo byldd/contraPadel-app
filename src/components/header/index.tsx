@@ -1,10 +1,10 @@
-import {Text, TouchableOpacity} from 'react-native';
-import React, {memo} from 'react';
-import Icon from 'react-native-vector-icons/Ionicons';
-import {theme} from '../../infrastructure/theme';
-import {commonStyles} from '../../styles/commonStyles';
-import {Row} from '../tools';
-import {useNavigation} from '@react-navigation/native';
+import { Text, TouchableOpacity } from "react-native";
+import React, { memo } from "react";
+import Icon from "react-native-vector-icons/Ionicons";
+import { theme } from "../../infrastructure/theme";
+import { commonStyles } from "../../styles/commonStyles";
+import { Row } from "../tools";
+import { router } from "expo-router";
 
 const Header = ({
   title,
@@ -15,12 +15,10 @@ const Header = ({
   hideRightButtons?: boolean;
   hideBackButton?: boolean;
 }) => {
-  const navigation = useNavigation();
   return (
     <>
       <Row alignItems="center" justifyContent="space-between">
-        <TouchableOpacity
-          onPress={() => (hideBackButton ? {} : navigation.goBack())}>
+        <TouchableOpacity onPress={() => (hideBackButton ? {} : router.back())}>
           <Row alignItems="center" gap={10} style={[commonStyles.padding16]}>
             {!hideBackButton && (
               <Icon
@@ -34,7 +32,8 @@ const Header = ({
                 commonStyles.text16,
                 commonStyles.whiteText,
                 commonStyles.bold600,
-              ]}>
+              ]}
+            >
               {title}
             </Text>
           </Row>

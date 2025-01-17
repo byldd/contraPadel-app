@@ -1,4 +1,4 @@
-import React, {memo} from 'react';
+import React, { memo } from "react";
 import {
   ImageBackground,
   RefreshControl,
@@ -7,11 +7,11 @@ import {
   StyleSheet,
   View,
   ViewStyle,
-} from 'react-native';
-import {KeyboardAwareScrollView} from 'react-native-keyboard-aware-scroll-view';
-import {commonStyles} from '../../../styles/commonStyles';
-import {theme} from '../../../infrastructure/theme';
-import {Images} from '../../../assets/images';
+} from "react-native";
+import { KeyboardAwareScrollView } from "react-native-keyboard-aware-scroll-view";
+import { commonStyles } from "../../../styles/commonStyles";
+import { theme } from "../../../infrastructure/theme";
+import { Images } from "@/assets/images";
 
 const ScreenWrapper = ({
   children,
@@ -39,7 +39,8 @@ const ScreenWrapper = ({
       <ImageBackground
         style={[commonStyles.fullFlex]}
         source={Images.bg1}
-        resizeMode="stretch">
+        resizeMode="stretch"
+      >
         <SafeAreaView style={[commonStyles.fullFlex, safeAreaStyle]}>
           {headerComponent && headerComponent}
           <KeyboardAwareScrollView
@@ -57,13 +58,15 @@ const ScreenWrapper = ({
             keyboardShouldPersistTaps="handled"
             extraHeight={extraHeight}
             enableOnAndroid={true}
-            keyboardOpeningTime={0}>
+            keyboardOpeningTime={0}
+          >
             <View
               style={[
                 commonStyles.fullFlex,
                 paddingHorizontal && commonStyles.ph16,
                 style,
-              ]}>
+              ]}
+            >
               {children}
             </View>
           </KeyboardAwareScrollView>
@@ -76,14 +79,16 @@ const ScreenWrapper = ({
     <ImageBackground
       style={[commonStyles.fullFlex]}
       source={Images.bg}
-      resizeMode="stretch">
+      resizeMode="stretch"
+    >
       <SafeAreaView style={[commonStyles.fullFlex]}>
         <View
           style={[
             commonStyles.fullFlex,
             paddingHorizontal && commonStyles.ph16,
             style,
-          ]}>
+          ]}
+        >
           {children}
         </View>
       </SafeAreaView>

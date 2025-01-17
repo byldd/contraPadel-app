@@ -1,20 +1,15 @@
-import {Button} from 'react-native';
-import React from 'react';
-import {useNavigation} from '@react-navigation/native';
-import {ROUTES} from '../../navigation/routes';
-import {Navigation} from '../../types/navigation.type';
-import ScreenWrapper from '../../components/layouts/screenWrapper/screenWrapper';
-import Header from '../../components/header';
+import { Button } from "react-native";
+import React from "react";
+import ScreenWrapper from "../../components/layouts/screenWrapper/screenWrapper";
+import Header from "../../components/header";
+import { router } from "expo-router";
+import { ROUTES } from "@/src/navigation/routes";
 
 const HomeScreen = () => {
-  const navigation: Navigation = useNavigation();
   return (
     <>
-      <ScreenWrapper scrollEnabled headerComponent={<Header title={'HOME'} />}>
-        <Button
-          title="Profile"
-          onPress={() => navigation.navigate(ROUTES.PROFILE)}
-        />
+      <ScreenWrapper scrollEnabled headerComponent={<Header title={"HOME"} />}>
+        <Button title="Profile" onPress={() => router.push(ROUTES.PROFILE)} />
       </ScreenWrapper>
     </>
   );

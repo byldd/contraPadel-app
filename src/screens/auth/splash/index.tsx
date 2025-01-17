@@ -1,28 +1,25 @@
-import React from 'react';
-import {ROUTES} from '../../../navigation/routes';
-import {useNavigation} from '@react-navigation/native';
-import {Navigation} from '../../../types/navigation.type';
-import ScreenWrapper from '../../../components/layouts/screenWrapper/screenWrapper';
-import CustomButton from '../../../components/button/customButton';
-import {Column, Row} from '../../../components/tools';
-import {commonStyles} from '../../../styles/commonStyles';
+import React from "react";
+import ScreenWrapper from "../../../components/layouts/screenWrapper/screenWrapper";
+import CustomButton from "../../../components/button/customButton";
+import { Column, Row } from "../../../components/tools";
+import { commonStyles } from "../../../styles/commonStyles";
+import { ROUTES } from "@/src/navigation/routes";
+import { router } from "expo-router";
 
 const SplashScreen = () => {
-  const navigation: Navigation = useNavigation();
-
   return (
     <ScreenWrapper>
       <Column justifyContent="center" style={[commonStyles.fullFlex]}>
         <CustomButton
           rounded
           title="REGISTER"
-          onPress={() => navigation.navigate(ROUTES.REGISTER)}
+          onPress={() => router.push(ROUTES.REGISTER)}
         />
         <CustomButton
           rounded
-          title="LOGIN"
+          title="HOME"
           outlined
-          onPress={() => navigation.navigate(ROUTES.LOGIN)}
+          onPress={() => router.push(ROUTES.HOME)}
         />
         <Row justifyContent="space-between">
           <CustomButton
@@ -30,7 +27,7 @@ const SplashScreen = () => {
             title="LOGIN"
             small
             halfWidth
-            onPress={() => navigation.navigate(ROUTES.LOGIN)}
+            onPress={() => router.push(ROUTES.LOGIN)}
           />
           <CustomButton
             rounded
@@ -38,7 +35,7 @@ const SplashScreen = () => {
             outlined
             small
             halfWidth
-            onPress={() => navigation.navigate(ROUTES.LOGIN)}
+            onPress={() => router.push(ROUTES.LOGIN)}
           />
         </Row>
         <Row justifyContent="space-between">
@@ -47,13 +44,13 @@ const SplashScreen = () => {
             outlined
             small
             halfWidth
-            onPress={() => navigation.navigate(ROUTES.LOGIN)}
+            onPress={() => router.push(ROUTES.LOGIN)}
           />
           <CustomButton
             title="LOGIN >"
             small
             halfWidth
-            onPress={() => navigation.navigate(ROUTES.LOGIN)}
+            onPress={() => router.push(ROUTES.LOGIN)}
           />
         </Row>
       </Column>

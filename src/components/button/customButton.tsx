@@ -1,10 +1,9 @@
-import React, {memo, useMemo} from 'react';
-import {ActivityIndicator, Text, TouchableOpacity, View} from 'react-native';
-import {theme} from '../../infrastructure/theme';
-import {commonStyles} from '../../styles/commonStyles';
-import {styles} from './style';
-import LinearGradient from 'react-native-linear-gradient';
-
+import React, { memo, useMemo } from "react";
+import { ActivityIndicator, Text, TouchableOpacity, View } from "react-native";
+import { theme } from "../../infrastructure/theme";
+import { commonStyles } from "../../styles/commonStyles";
+import { styles } from "./style";
+import { LinearGradient } from "expo-linear-gradient";
 interface ICustomButton {
   title?: string;
   onPress?: () => void;
@@ -17,7 +16,7 @@ interface ICustomButton {
 }
 
 const CustomButton = ({
-  title = '',
+  title = "",
   onPress,
   loading = false,
   outlined = false,
@@ -35,7 +34,7 @@ const CustomButton = ({
       outlined && styles.outlined,
       rounded && styles.rounded,
     ],
-    [small, disabled, outlined, halfWidth, rounded],
+    [small, disabled, outlined, halfWidth, rounded]
   );
   return (
     <TouchableOpacity onPress={onPress} disabled={disabled}>
@@ -49,11 +48,12 @@ const CustomButton = ({
         </View>
       ) : (
         <LinearGradient
-          start={{x: 0.0, y: 0.9}}
-          end={{x: 1.5, y: 0.5}}
+          start={{ x: 0.0, y: 0.9 }}
+          end={{ x: 1.5, y: 0.5 }}
           locations={[0, 0.6]}
-          colors={['#BA1924', '#6F356D']}
-          style={buttonStyle}>
+          colors={["#BA1924", "#6F356D"]}
+          style={buttonStyle}
+        >
           {loading ? (
             <ActivityIndicator size={18} color={theme.colors.ui.white} />
           ) : (
