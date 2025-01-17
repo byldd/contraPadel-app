@@ -1,20 +1,20 @@
-import { View, Text } from "react-native";
-import React from "react";
-import { Tabs } from "expo-router";
-import { theme } from "@/src/infrastructure/theme";
-import { ROUTES } from "@/src/navigation/routes";
-import { commonStyles } from "@/src/styles/commonStyles";
-import { BottomTabNavigationOptions } from "@react-navigation/bottom-tabs";
-import Icon from "react-native-vector-icons/Ionicons";
+import {View, Text} from 'react-native';
+import React from 'react';
+import {Tabs} from 'expo-router';
+import {theme} from '@/src/infrastructure/theme';
+import {ROUTES} from '@/src/navigation/routes';
+import {commonStyles} from '@/src/styles/commonStyles';
+import {BottomTabNavigationOptions} from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const _layout = () => {
   const getTabBarIcon = (routeName: string, focused: boolean) => {
-    let iconName = "home-outline";
+    let iconName = 'home-outline';
 
     if (routeName === ROUTES.HOME) {
-      iconName = "home-outline";
+      iconName = 'home-outline';
     } else if (routeName === ROUTES.PROFILE) {
-      iconName = "person-outline";
+      iconName = 'person-outline';
     }
 
     return (
@@ -26,17 +26,16 @@ const _layout = () => {
     );
   };
   const tabScreenOptions = (routeName: string): BottomTabNavigationOptions => ({
-    tabBarIcon: ({ focused }) => getTabBarIcon(routeName, focused),
-    tabBarLabel: ({ focused }) => (
+    tabBarIcon: ({focused}) => getTabBarIcon(routeName, focused),
+    tabBarLabel: ({focused}) => (
       <Text
         style={{
           ...commonStyles.smallText,
           ...commonStyles.bold500,
           color: focused ? theme.colors.ui.primary : theme.colors.ui.white,
           marginTop: 6,
-        }}
-      >
-        {routeName.includes("profile") ? "Profile" : "Home"}
+        }}>
+        {routeName.includes('profile') ? 'Profile' : 'Home'}
       </Text>
     ),
   });
@@ -48,7 +47,8 @@ const _layout = () => {
         tabBarStyle: {
           backgroundColor: theme.colors.ui.transparent,
           borderTopWidth: 0,
-          position: "absolute",
+          position: 'absolute',
+          bottom: 0,
         },
         // tabBarBackground: () => {
         //   return (
@@ -62,8 +62,7 @@ const _layout = () => {
         //     />
         //   );
         // },
-      }}
-    >
+      }}>
       <Tabs.Screen name="index" options={() => tabScreenOptions(ROUTES.HOME)} />
       <Tabs.Screen
         name="profile/index"
