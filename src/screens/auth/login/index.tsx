@@ -2,17 +2,22 @@ import {Button} from 'react-native';
 import React from 'react';
 import ScreenWrapper from '../../../components/layouts/screenWrapper/screenWrapper';
 import Header from '../../../components/header';
-import {router} from 'expo-router';
+import {RelativePathString, router} from 'expo-router';
 import {ROUTES} from '@/src/navigation/routes';
-import {useLoginViewModal} from '@/src/screens/auth/login/viewmodal';
+import {useLoginViewModal} from './viewModal';
 
 const LoginScreen = () => {
-  const {test} = useLoginViewModal();
+  const {onGoogleButtonPress} = useLoginViewModal();
   return (
     <ScreenWrapper>
       <Header title={'SIGN IN'} hideBackButton />
-      <Button title="test" onPress={test} />
-      <Button title="REGISTER" onPress={() => router.push(ROUTES.REGISTER)} />
+      <Button title="Google login" onPress={onGoogleButtonPress} />
+      <Button
+        title="REGISTER"
+        onPress={() =>
+          router.push(ROUTES.REGISTER as string as RelativePathString)
+        }
+      />
       <Button title="HOME" onPress={() => router.push(ROUTES.HOME)} />
     </ScreenWrapper>
   );

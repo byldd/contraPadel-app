@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "174677457614",
+    "project_id": "contrapadel-e32b9",
+    "storage_bucket": "contrapadel-e32b9.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:174677457614:android:a2eb4299fd254b2c26ae9f",
+        "android_client_info": {
+          "package_name": "com.anonymous.contraPadelapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "174677457614-62sbg42lfqlu6d0i8kpm6krh4jkghkqf.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.anonymous.contraPadelapp",
+            "certificate_hash": "5e8f16062ea3cd2c4a0d547876baa6f38cabf625"
+          }
+        },
+        {
+          "client_id": "174677457614-9t5163dhni8fckk29pvtt63m9abqfcvr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBBdzUSvzEBjdruh8xtKnd_iRRJjBbUUwk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "174677457614-9t5163dhni8fckk29pvtt63m9abqfcvr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

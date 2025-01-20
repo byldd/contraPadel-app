@@ -1,7 +1,7 @@
-export const ROUTES = {
-  LOGIN: "/auth/login",
-  REGISTER: "auth/register",
-  HOME: "/(tabs)",
-  PROFILE: "/(tabs)/profile",
-  SPLASH: "/",
-};
+export enum ROUTES {
+  LOGIN = 'auth/login',
+  REGISTER = 'auth/register',
+  HOME = '(tabs)',
+  PROFILE = '(tabs)/profile',
+  SPLASH = 'index',
+}

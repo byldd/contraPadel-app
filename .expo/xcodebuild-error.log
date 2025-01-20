@@ -1,0 +1,10 @@
+--- xcodebuild: WARNING: Using the first of multiple matching destinations:
+{ platform:iOS Simulator, id:DB37163D-51FB-4EBB-BBC6-4A0EAA4FDE6B, OS:17.2, name:iPhone 15 }
+{ platform:iOS Simulator, id:DB37163D-51FB-4EBB-BBC6-4A0EAA4FDE6B, OS:17.2, name:iPhone 15 }
+** BUILD FAILED **
+
+
+The following build commands failed:
+	PhaseScriptExecution [CP]\ Check\ Pods\ Manifest.lock /Users/apple/Library/Developer/Xcode/DerivedData/contraPadelapp-aoocybohdglytxfompqgrzxuoyvq/Build/Intermediates.noindex/contraPadelapp.build/Debug-iphonesimulator/contraPadelapp.build/Script-08A4A3CD28434E44B6B9DE2E.sh (in target 'contraPadelapp' from project 'contraPadelapp')
+	Building workspace contraPadelapp with scheme contraPadelapp and configuration Debug
+(2 failures)
