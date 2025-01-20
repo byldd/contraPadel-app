@@ -15,6 +15,7 @@ export const inputStyles = StyleSheet.create({
     borderColor: theme.colors.border,
     height: 65,
     paddingHorizontal: theme.sizes[4],
+    backgroundColor: theme.colors.ui.inputBg,
   },
   multiLineInput: {
     height: 150,
@@ -43,9 +44,9 @@ export const inputStyles = StyleSheet.create({
     alignItems: 'center',
   },
   topLabel: {
-    fontSize: theme.fontSizes.button,
-    color: theme.colors.ui.gray,
+    fontSize: theme.fontSizes.text,
+    color: theme.colors.ui.text,
     marginBottom: 8,
-    fontFamily: theme.fontWeights.bold400,
+    fontFamily: theme.fontWeights.bold600,
   },
 });

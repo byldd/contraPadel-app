@@ -15,10 +15,10 @@ const LoginScreen = () => {
       <Button
         title="REGISTER"
         onPress={() =>
-          router.push(ROUTES.REGISTER as string as RelativePathString)
+          router.navigate(ROUTES.REGISTER as string as RelativePathString)
         }
       />
-      <Button title="HOME" onPress={() => router.push(ROUTES.HOME)} />
+      <Button title="HOME" onPress={() => router.navigate(ROUTES.HOME)} />
     </ScreenWrapper>
   );
 };

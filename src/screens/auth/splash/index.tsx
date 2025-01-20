@@ -14,13 +14,13 @@ const SplashScreen = () => {
         <CustomButton
           rounded
           title="Register"
-          onPress={() => router.push(ROUTES.REGISTER)}
+          onPress={() => router.navigate(ROUTES.REGISTER)}
         />
         <CustomButton
           rounded
           title="Log in"
           outlined
-          onPress={() => router.push(ROUTES.LOGIN)}
+          onPress={() => router.navigate(ROUTES.LOGIN)}
         />
       </Column>
     </ScreenWrapper>
