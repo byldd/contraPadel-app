@@ -9,9 +9,9 @@
     "newArchEnabled": true,
 
     "ios": {
+      "googleServicesFile": "./GoogleService-Info.plist",
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.contraPadel-app",
-      "useFrameworks": "static"
+      "bundleIdentifier": "com.anonymous.contraPadel-app"
     },
     "android": {
       "googleServicesFile": "./google-services.json",
@@ -26,6 +26,17 @@
     },
     "plugins": [
       "expo-router",
+      "@react-native-firebase/app",
+      "@react-native-firebase/auth",
+      "@react-native-firebase/crashlytics",
+      [
+        "expo-build-properties",
+        {
+          "ios": {
+            "useFrameworks": "static"
+          }
+        }
+      ],
       [
         "expo-splash-screen",
         {

@@ -31,6 +31,12 @@
           <string>com.anonymous.contraPadel-app</string>
         </array>
       </dict>
+      <dict>
+        <key>CFBundleURLSchemes</key>
+        <array>
+          <string>com.googleusercontent.apps.174677457614-s61q4hmpuo8lkonpijr957fqv19jfd7u</string>
+        </array>
+      </dict>
     </array>
     <key>CFBundleVersion</key>
     <string>1</string>
