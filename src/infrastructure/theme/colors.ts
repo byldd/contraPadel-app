@@ -2,8 +2,8 @@ export const colors = {
   ui: {
     primary: '#EF4B46',
     secondary: '#689E9F',
-    text: '#150F2F',
-    subtext: '#150F2FCC',
+    text: '#FFFFFF',
+    subtext: '#FFFFFFCC',
     transparent: 'transparent',
     error: '#D23D50',
     errorLight: '#fdf2f3',

@@ -12,47 +12,15 @@ const SplashScreen = () => {
       <Column justifyContent="center" style={[commonStyles.fullFlex]}>
         <CustomButton
           rounded
-          title="REGISTER"
+          title="Register"
           onPress={() => router.push(ROUTES.REGISTER)}
         />
         <CustomButton
           rounded
-          title="HOME"
+          title="Log in"
           outlined
-          onPress={() => router.push(ROUTES.HOME)}
+          onPress={() => router.push(ROUTES.LOGIN)}
         />
-        <Row justifyContent="space-between">
-          <CustomButton
-            rounded
-            title="LOGIN"
-            small
-            halfWidth
-            onPress={() => router.push(ROUTES.LOGIN)}
-          />
-          <CustomButton
-            rounded
-            title="LOGIN"
-            outlined
-            small
-            halfWidth
-            onPress={() => router.push(ROUTES.LOGIN)}
-          />
-        </Row>
-        <Row justifyContent="space-between">
-          <CustomButton
-            title="LOGIN"
-            outlined
-            small
-            halfWidth
-            onPress={() => router.push(ROUTES.LOGIN)}
-          />
-          <CustomButton
-            title="LOGIN >"
-            small
-            halfWidth
-            onPress={() => router.push(ROUTES.LOGIN)}
-          />
-        </Row>
       </Column>
     </ScreenWrapper>
   );
