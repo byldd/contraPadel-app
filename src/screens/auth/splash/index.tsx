@@ -5,6 +5,7 @@ import {Column, Row} from '../../../components/tools';
 import {commonStyles} from '../../../styles/commonStyles';
 import {ROUTES} from '@/src/navigation/routes';
 import {router} from 'expo-router';
+import {logger} from '@/src/utils/commonFunctions';
 
 const SplashScreen = () => {
   return (
