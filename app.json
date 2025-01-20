@@ -11,7 +11,8 @@
     "ios": {
       "googleServicesFile": "./GoogleService-Info.plist",
       "supportsTablet": true,
-      "bundleIdentifier": "com.anonymous.contraPadel-app"
+      "bundleIdentifier": "com.anonymous.contraPadel-app",
+      "usesAppleSignIn": true
     },
     "android": {
       "googleServicesFile": "./google-services.json",
@@ -29,6 +30,7 @@
       "@react-native-firebase/app",
       "@react-native-firebase/auth",
       "@react-native-firebase/crashlytics",
+      "expo-apple-authentication",
       [
         "expo-build-properties",
         {

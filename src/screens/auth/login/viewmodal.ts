@@ -1,4 +1,3 @@
-import {useEffect} from 'react';
 import {GoogleSignin} from '@react-native-google-signin/google-signin';
 import auth from '@react-native-firebase/auth';
 import {config} from '@/src/utils/config';
@@ -7,7 +6,7 @@ GoogleSignin.configure({
   webClientId: config.WEB_CLIENT_ID,
 });
 export const useLoginViewModal = () => {
-  async function onGoogleButtonPress() {
+  const onGoogleButtonPress = async () => {
     await GoogleSignin.hasPlayServices();
     const {data} = await GoogleSignin.signIn();
     const googleCredential = auth.GoogleAuthProvider.credential(
@@ -28,11 +27,11 @@ export const useLoginViewModal = () => {
         name: {first, last},
         oauth: 'GOOGLE',
         firebaseUid: firebaseUser.uid,
-        idToken: data && data.idToken,
+        // idToken: data && data.idToken,
       },
     };
     console.log(response);
     return response;
-  }
+  };
   return {onGoogleButtonPress};
 };
